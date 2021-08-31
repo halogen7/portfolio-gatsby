@@ -1,7 +1,7 @@
 module.exports = {
 	siteMetadata: {
 		siteUrl: "https://www.yourdomain.tld",
-		title: "my-portfolio",
+		title: "Gatsby Portfolio",
 	},
 	plugins: [
 		"gatsby-plugin-sass",
@@ -25,6 +25,14 @@ module.exports = {
 				path: "./src/pages/",
 			},
 			__key: "pages",
+		},
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				name: "blog",
+				path: "./blog",
+			},
+			__key: "blog",
 		},
 	],
 };
