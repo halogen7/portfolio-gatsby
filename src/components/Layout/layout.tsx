@@ -8,7 +8,12 @@ import {
 	navLinkText,
 } from "./layout.module.scss";
 
-const Layout = ({ pageTitle, children }) => {
+interface LayoutProps {
+	pageTitle: string;
+	children?: React.ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ pageTitle, children }) => {
 	return (
 		<div className={container}>
 			<title>{pageTitle}</title>
